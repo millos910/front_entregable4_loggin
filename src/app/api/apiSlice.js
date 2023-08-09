@@ -2,7 +2,8 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 
 const baseQuery = fetchBaseQuery({
-    baseUrl: process.env.REACT_APP_API_URL,
+    //baseUrl: process.env.REACT_APP_API_URL,
+    baseUrl:'https://auth-db-entregable4.onrender.com/api/v1', 
     prepareHeaders: (headers, { getState }) => {
         const token = getState().localStorage.token;
         if(token){
